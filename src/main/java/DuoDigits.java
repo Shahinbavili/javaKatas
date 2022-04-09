@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.HashSet;
 
 public class DuoDigits {
@@ -14,9 +15,7 @@ public class DuoDigits {
         String [] SElements = s.split("");
 
         HashSet<String> hset = new HashSet<>();
-        for (String i : SElements){
-            hset.add(i);
-        }
+        Collections.addAll(hset, SElements);
 
         if (hset.size() > 2){
             return "n";
